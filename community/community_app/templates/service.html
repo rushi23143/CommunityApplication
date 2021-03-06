@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service page</title>
+</head>
+<body>
+<h1>Services page</h1>
+<div>
+    <a class="container btn btn-default bg-dark" style="margin-left:585px; color:white; width: 130px;" href="{% url 'add_service' %}"><i class="fas fa-plus"> </i> Add Service</span></a>
+    <br><br><br>
+    <table id="example" class="table table-hover">
+        <thead>
+        <tr>
+            <th>Service Name</th>
+            <th>Service Provider Name</th>
+            <th>Contact No</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in service_list %}
+        <tr>
+            <td>{{i.service_name}}</td>
+            <td>{{i.service_provider_name}}</td>
+            <td>{{i.contact_no}}</td>
+            <td>{{i.price}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+{% endblock %}

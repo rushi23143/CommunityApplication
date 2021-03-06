@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+</head>
+<body>
+<h1 py-4>contact page</h1>
+<form method="post">
+    {% csrf_token %}
+  <h3>Contact page</h3>
+  <div class="mb-3">
+    <label for="Name" class="form-label">Name</label>
+    <input name="name" type="text" class="form-control" id="Name">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email-id</label>
+    <input name="email" type="text" class="form-control" id="email" aria-describedby="email">
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Mobile No</label>
+    <input name="phone" type="text" class="form-control" id="phone">
+  </div>
+  <div class="mb-3">
+    <label for="desc" class="form-label">Mobile No</label>
+    <input name="desc" type="text" class="form-control" id="desc">
+  </div>
+  <button type="submit" class="btn btn-dark bg-dark">Submit</button>
+</form>
+
+</body>
+</html>
+{% endblock %}

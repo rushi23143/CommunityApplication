@@ -1,0 +1,121 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>About_me</title>
+	  <style>
+	  /*---------- Header ----------*/
+
+#header {
+    background-color: #333;
+    color: #efefef;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.main-text {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 70px;
+    margin: 100px auto 100px;
+}
+
+.learn {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+		  #about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url();
+    background-size: cover;
+    background-position: center;
+    color: #efefef background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#about .col-md-6 {
+    color: #ccc;
+}
+
+#about h2 {
+    padding-bottom: 20px;
+}
+
+#about p {
+    font-size: 20px;
+}
+
+#about button {
+    margin-top: 20px;
+}
+
+#about .col-md-6 {
+    margin: auto;
+}
+
+#about h2::after {
+    content: '';
+    background-color: #ccc;
+    display: block;
+    height: 3px;
+    width: 200px;
+    margin: 20px auto 5px;
+}
+	  </style>
+  </head>
+  <body>
+  <section id="header">
+    <div class="container">
+        <div class="main-text">
+            <span style="color:white; font-size:65px;">A</span><span style="color: white; font-size:55px;">bout</span>
+            <span style="color:grey; font-size:65px;">U</span><span
+                style="color:grey; font-size:55px;">s</span>
+        </div>
+        <div class="learn">
+            Learn Full-Stack Web Development with us.
+        </div>
+    </div><br>
+</section>
+    <section id="about">
+    <div class="container text-center">
+        <div class="col-md-6">
+            <h2>About_us</h2>
+            <p>Hey there!</p>
+            <p>My name is Rushi jadhav. I'm a web developer</p>
+            <p>On this blog I post tutorial on Web Development</p>
+            <p>Click on Explore button below to check all tutorials.</p>
+            <a href="/posts/">
+                <button class="btn btn-outline-success">Explore</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
+
+{% endblock %}
+

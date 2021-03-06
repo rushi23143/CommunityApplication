@@ -1,0 +1,74 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet">
+
+    <title>Community_application</title>
+  </head>
+  <body>
+  {% block content %}
+  <section id="navbar">
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Community Application</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">HOME</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'service' %}">SERCIVES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'queries' %}">QUERIES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">LOGOUT</a>
+        </li>
+        {% else %}
+        <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
+        <a class="nav-link" href="{% url 'register' %}">REGISTER</a >
+
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">CONTACT US</a>
+        </li>
+        <br><br>
+        <nav class="navbar navbar-light bg-light">
+</nav>
+      </ul>
+    </div>
+  </div>
+</nav>
+</section>
+    <h1>WELCOME TO COMMUNITY APPLICATION</h1>
+    <h3>THIS IS MY COMMUNITY HOME PAGE<h3>
+      <h4>my name is {{name}} my age is {{age}} my location is {{location}}<h4>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="{% static 'blog/js/jquery.js' %}"></script>
+    <script src="{% static 'blog/js/popper.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.js' %}"></script>
+    
+      {% endblock %}
+  </body>
+</html>

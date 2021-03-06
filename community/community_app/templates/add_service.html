@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+  <h3>Add Service</h3>
+  <div class="mb-3">
+    <label for="exampleInputServiceName" class="form-label">Service Name</label>
+    <input name="service_name" type="text" class="form-control" id="exampleInputServiceName">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputSPN" class="form-label">Service Provider Name</label>
+    <input name="service_provider" type="text" class="form-control" id="exampleInputSPN" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPrice" class="form-label">Price</label>
+    <input name="price" type="text" class="form-control" id="exampleInputPrice">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputContactNo" class="form-label">Contact No</label>
+    <input name="contact_no" type="text" class="form-control" id="exampleInputContactNo">
+  </div>
+  <button type="submit" class="btn btn-dark bg-dark">Submit</button>
+</form>
+</body>
+</html>
+{% endblock %}
